@@ -1,0 +1,39 @@
+.introducao {
+    background: black;
+}
+/* o h2 tambem esta em style */
+.introducao h2 {
+    color: blanchedalmond;
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2;
+    margin-top: -2em;
+    margin-bottom: 2em;
+    line-height: 0;
+}
+
+.introducao img {
+    display: block;
+    margin:0 auto;
+    max-width: 100%;
+}
+
+/* slide  */
+
+.slide{
+    position: relative;
+    overflow: hidden;
+
+}
+/* todos os filhos que esta dentro do slide */
+.slide > * {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: .3s;
+}
+.slide >.active{
+    position: relative;
+    opacity: 1;
+}

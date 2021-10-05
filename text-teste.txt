@@ -1,0 +1,32 @@
+texto que funciona mas nao esta otimizado [
+    $(document).ready(function(){
+        var classActive ='active';
+        // deixar as 1 classe ativa
+        $('.animais .tab-menu a').first().addClass(classActive);
+        $('.animais .item').first().addClass(classActive);
+        // mudar a cor do menu 
+        $('.animais .tab-menu a').click(function(e){
+            e.preventDefault(); // nao pula pro id 
+            var itemId = $(this).attr('href');
+
+            $('.animais .tab-menu a, .animais .item').removeClass(classActive); //remove as que nao sao clicad
+            $(this).addClass(classActive);
+            $(itemId).addClass(classActive);
+        });
+
+        // deixar a primeira classe ativo
+        $('.florestas .tab-menu a').first().addClass(classActive);
+        $('.florestas .item').first().addClass(classActive);
+
+        // mudar a cor do menu da floresta etc
+        $('.florestas .tab-menu a').click(function(e){
+            e.preventDefault(); // nao pula pro id 
+            var itemId = $(this).attr('href');
+
+            $('.florestas .tab-menu a, .florestas .item').removeClass(classActive); //remove as que nao sao clicad
+            $(this).addClass(classActive);
+            $(itemId).addClass(classActive);
+        });
+
+});
+]
